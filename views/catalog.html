@@ -1,0 +1,39 @@
+<section class="container" ng-controller="categoryViewController">
+			<article class="furnitureBox" ng-repeat="furniture in items | filter: {category: category}" class="furnitureCatalog">
+				<div class="furniture-box">
+					<a href="#/catalog/{{furniture.id}}">
+					<img ng-src="{{furniture.image}}" class="furniture-image" alt="{{furniture.image}}"/>
+					</a>
+				</div>
+				<p><strong>Name:</strong> {{furniture.name}}</p>
+				<p><strong>Category:</strong> {{furniture.category}}</p>
+				<p><strong>Description:</strong> {{furniture.description}}</p>
+				<p><strong>Price:</strong> {{furniture.price}} €</p>				
+			</article>
+</section>
+
+
+
+
+
+<!-- 
+	<div class="row" ng-model="categoryViewController">
+		<div class="col-xs-12">
+			<form>
+				<select name="category" ng-model="category" ng-options="item.category as item.category for item in items | unique:'category'">
+					<option value="{{item.category}}">{{item.category}}</option>
+				</select>
+			</form>	
+	
+			<article class="furnitureBox" ng-repeat="furniture in items | filter: {name: nameFilter, category: category, description: description, price: currentPrice}" class="furnitureCatalog">
+				<div class="furniture-box">
+					<img ng-src="{{furniture.image}}" class="furniture-image" alt="{{furniture.image}}"/>
+				</div>
+				<p><strong>Name:</strong> {{furniture.name}}</p>
+				<p><strong>Category:</strong> {{furniture.category}}</p>
+				<p><strong>Description:</strong> {{furniture.description}}</p>
+				<p><strong>Price:</strong> {{furniture.price}} €</p>				
+			</article>
+
+		</div>
+	</div> -->

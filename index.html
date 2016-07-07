@@ -1,19 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="store">
 <head>
 	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-	<title>Expenses Track</title>
+	<title>Furniture Store</title>
 	<link rel = "stylesheet" type = "text/css" href = "css/bootstrap.min.css">
 	<link rel = "stylesheet" type = "text/css" href = "css/style.css">
-
+	<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
+	<link rel="shortcut icon" type="image/x-icon" href="images/icon.ico">
 </head>
-<body>
+<body ng-controller="HomeViewController">
+<header>
+	<nav class="navbar navbar-default mainNavbar">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#/">
+					<img alt="Brand" src="images/logo2.jpg" width="10%" style="display: inline">{{appTittle}}
+				</a>
+			</div>
+		</div>
+	</nav>
+	</header>
+	<main>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<ul class="nav nav-pills">
+					<li role="presentation"><a href="#/" class="navbarText"><strong>Home</strong></a></li>
+					<li role="presentation"><a href="#/catalog" class="navbarText"><strong>Full Catalog</strong></a></li>
+					<li role="presentation"><a href="#/catalog/tables" class="navbarText"><strong>Desks</strong></a></li>
+					<li role="presentation"><a href="#/catalog/closets" class="navbarText"><strong>Wardrobes</strong></a></li>
+					<li role="presentation"><a href="#/catalog/bookshelves" class="navbarText"><strong>Bookshelves</strong></a></li>
+					<li role="presentation"><a href="#/aboutus" class="navbarText"><strong>About us</strong></a></li>
+					<li role="presentation"><a href="#/contact" class="navbarText"><strong>Contact</strong></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
 
+<div class="container-fluid containerView" ng-view></div>	
+</main>
+	<!--FOOTER-->	
+	<footer>
+	<nav class="navbar navbar-default mainNavbar">
+		<div class="container-fluid footerIcons">
+			<span class="footerList"><a href="https://www.facebook.com/"><i class="fa fa-facebook-square fa-2x" aria-hidden="true" style="padding-top: 20px; margin-right: 5px; margin-left:5px"></i></a></span>
+			<span class="footerList"><a href="https://twitter.com/"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></span>
+			<span class="footerList"><i class="fa fa-copyright" aria-hidden="true"> All Rights Reserved</i></span>
+		</div>
+	</nav>
+	</footer>
+	<script src = "js/jquery-1.12.4.min.js"></script>
+	<script src = "js/angular.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
+	<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.8/angular-filter.min.js"></script>
+	<script src = "js/app.js"></script>
+	<script src = "js/bootstrap.min.js"></script>	
 
-<script src = "js/jquery-1.12.4.min.js"></script>
-<script src = "js/angular.min.js" rel ="stylesheet"></script>
- <script src="js/angular-route.min.js"></script>
-<script src = "js/app.js"></script>
-<script src = "js/bootstrap.min.js"></script>	
 </body>
 </html>
+
+

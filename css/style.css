@@ -1,0 +1,75 @@
+body {
+	font-family: sans-serif;
+	display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+}
+
+main{
+    flex: 1 0 auto;
+}
+
+.footerList {
+	display: inline;
+	
+}
+.footerIcons{
+	text-align: center;
+	vertical-align: middle;
+}
+
+.carousel{
+    margin-top: 20px;
+}
+.carousel .item img{
+    margin: 0 auto; 
+ 
+
+}
+.bs-example{
+	margin: 20px;
+}
+
+.mainNavbar {
+	background-color: #EEEEEE;
+	height: 72px;
+}
+
+.navbarText {
+	color:#666666;
+}
+.brandTittle {
+	margin-left: 10px;
+}
+
+.containerView{
+	padding-bottom: 7em;
+}
+
+.furnitureBox {
+	font-family: sans-serif;
+	font-size: 17px;
+	display: inline-block;
+    width: 49.5%;
+    text-align: center;
+}
+
+.aboutusText {
+	font-family: sans-serif;
+	font-size: 17px;
+	margin-top: 10px;
+}
+
+.footer-images{
+	display: inline-block;
+	text-align: center;
+	margin: 0; 
+}
+
+.topProducts {
+	font-family: sans-serif;
+	font-size: 20px;
+	text-align: center;
+}
+/*inicio #1D242C
+fin #484D54*/
