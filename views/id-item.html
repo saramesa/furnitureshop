@@ -1,15 +1,11 @@
 <section class="container" ng-controller="idViewController">
-			
-			<article class="furnitureBox" ng-repeat="furniture in items" ng-show="furniture.id==1" class="furnitureCatalog">
-				<div class="furniture-box">
-					<img ng-src="{{furniture.image}}" class="furniture-image" alt="image"/>
-				</div>
-				<p><strong>Name:</strong> {{furniture.name}}</p>
-				<p><strong>Category:</strong> {{furniture.category}}</p>
-				<p><strong>Description:</strong> {{furniture.description}}
-				<br>
-					DESCRIPCION GRANDEEEEEEEEEEEEEEEEEEEEE
-				</br></p>
-				<p><strong>Price:</strong> {{furniture.price}} €</p>				
-			</article>
+	<article class="furnitureBox" ng-repeat="furniture in items | filter: {id: id}:true" class="furnitureCatalog">
+		<div class="furniture-box">
+			<h2><strong>Name:</strong> {{furniture.name}}</h2>
+			<img ng-src="{{furniture.image}}" class="furniture-image" alt="{{furniture.image}}"/>
+		</div>
+		<p><strong>Description:</strong> {{furniture.description}}</p>
+		<p><strong>Price:</strong> {{furniture.price}} €</p>              
+	</article>
 </section>
+

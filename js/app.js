@@ -1,4 +1,4 @@
-var app = angular.module('store', ["ngRoute"]);
+var app = angular.module('store', ["ngRoute", 'ui.directives','ui.filters']);
 
 var getJSON = function ($scope, $http){
 	$http.get("js/furnitureJSON.json").success(function(data) {
@@ -22,6 +22,7 @@ app.controller('categoryViewController', ['$scope', '$http', '$routeParams',  fu
 app.controller('idViewController', ['$scope', '$http', '$routeParams',  function($scope, $http, $routeParams) {
 	$scope.id = $routeParams.id;
 	getJSON($scope, $http);
+	
 }]);
 
 app.config(['$routeProvider', function($routeProvider) {
@@ -38,10 +39,10 @@ app.config(['$routeProvider', function($routeProvider) {
 		templateUrl: 'views/catalog.html',
 		controller: 'categoryViewController'
 	})
-	.when('/catalog/:id', {
+	.when('/catalog/id/:id', {
 		templateUrl: 'views/id-item.html',
 		controller: 'idViewController'
-	})						
+	})					
 	.when('/aboutus', {
 		templateUrl: 'views/aboutUs.html',
 		controller: 'catalogViewController'
